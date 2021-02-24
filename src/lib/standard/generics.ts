@@ -61,6 +61,6 @@ export class Lion extends Animal {
   keeper!: ZooKeeper;
 }
 // TODO: test
-export const createInstance = <A extends Animal>(c: new () => A): A {
+export const createInstance = <A extends Animal>(c: new () => A): A => {
   return new c();
-}
+};

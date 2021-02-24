@@ -1,11 +1,8 @@
 import test from 'ava';
 import {
-  create,
-  createInstance,
   GenericNumber,
   getProperty,
   length,
-  Lion,
   myPathThrough,
   myPathThrough2,
   pathThrough,
