@@ -16,3 +16,5 @@ export const plus = (a: number) => (b: number) => a + b;
 // });
 // 数値はカッコで包むと数値オブジェクトになる, 値と演算はペア
 // (1).plus(2) // 3
+
+export const unitPromise = Promise.resolve.bind(Promise);
