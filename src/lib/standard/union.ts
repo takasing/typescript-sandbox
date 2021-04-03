@@ -25,10 +25,16 @@ export class SandwichRestaurant<T extends string> {
         title: m.title,
         value: m.value,
       })),
-      (newValue) => console.log('new', newValue)
+      // is string value in union?
+      (newValue) => {
+        // 'T' only refers to a type, but is being used as a value here.ts(2693)
+        // console.log(newValue && newValue in T ? newValue : undefined)
+        console.log('new', newValue, newValue as T);
+      }
     );
   }
-  pick(title: string) {
-    return this.restaurant.pick(title);
+  pick(title: string): T | undefined {
+    const t = this.restaurant.pick(title)?.title;
+    return t as T;
   }
 }

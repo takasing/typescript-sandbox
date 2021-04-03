@@ -20,5 +20,5 @@ test('sandwich restaurant test', (t) => {
     // @ts-expect-error
     { title: 'BaconEggs', value: 'be' },
   ]);
-  t.deepEqual(res.pick('BLT')?.value, 'b');
+  t.deepEqual(res.pick('BLT'), 'BLT');
 });
